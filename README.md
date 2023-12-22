@@ -29,3 +29,11 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * 🧪 [Dimitris-Ilias Gkanatsios: CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
 * 🧪 [Liptan Biswas: Katacoda Practice Questions](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn)
 * 🧪 [Udemy: Certified Kubernetes Application Developer (CKAD) Practice Test](https://www.udemy.com/course/ckad-certified-kubernetes-application-developer-exam/)
+
+## Essentials commands and options
+
+```bash 
+# watch pod creation
+kubectl get pods -w # -w option means watch live pod 
+
+```
