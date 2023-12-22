@@ -28,6 +28,7 @@ You can discover details about the container by listing them.
 
 ```
 $ docker container ls
+$ docker ps # do the same thing
 CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                  NAMES
 9e0f1abcef41   nodejs-hello-world:1.0.0   "docker-entrypoint.s…"   25 seconds ago   Up 24 seconds   0.0.0.0:80->3000/tcp
 ```
@@ -60,8 +61,12 @@ Magic happens on port 3000
 
 To save the container image to a file, run the following command.
 
+
 ```
 $ docker save -o nodejs-hello-world-1.0.0.tar nodejs-hello-world:1.0.0
 $ ls
 nodejs-hello-world-1.0.0.tar
 ```
+
+
+# mettre ici d'autres infos pour bien apprehender docker.
