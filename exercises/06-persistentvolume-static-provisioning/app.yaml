@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: app
+  name: app
+spec:
+  containers:
+  - image: nginx:1.21.6
+    name: app
+    volumeMounts:
+      - mountPath: "/kkfk"
+        name: from-pvc
+    resources: {}
+  volumes:
+    - name: from-pvc
+      persistentVolumeClaim:
+        claimName: my-pvc
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

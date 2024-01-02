@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: rate-limiter
+  name: rate-limiter
+spec:
+  containers:
+  - image: bmuschko/nodejs-business-app:1.0.0
+    name: rate-limiter
+    ports:
+    - containerPort: 8080
+  - image: bmuschko/nodejs-ambassador:1.0.0
+    name: ambassador
+    ports:
+      - containerPort: 8081
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

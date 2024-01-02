@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod-without-resource-requirements
+  name: pod-without-resource-requirements
+spec:
+  containers:
+  - image: bmuschko/nodejs-hello-world:1.0.0
+    name: pod-without-resource-requirements
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

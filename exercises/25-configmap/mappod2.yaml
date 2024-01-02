@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: backend
+  name: backend
+spec:
+  containers:
+    - image: nginx:1.23.4-alpine
+      name: backend
+      volumeMounts:
+        - mountPath: "/etc/config"
+          name: env-config
+      resources: {}
+      envFrom:
+        - configMapRef:
+            name: special-config
+  volumes:
+    - name: env-config
+      configMap:
+        name: app-config
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

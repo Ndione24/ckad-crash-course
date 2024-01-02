@@ -49,3 +49,12 @@ spec:
   podSelector: {}
   policyTypes:
   - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              role : k1
+        - podSelector:
+            matchLabels:
+              role: frontend
+

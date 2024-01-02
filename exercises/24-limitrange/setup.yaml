@@ -11,7 +11,7 @@ metadata:
 spec:
   limits:
   - min:
-      cpu: 200m
+      cpu: 10m
     max:
-      cpu: 500m
+      cpu: 50m
     type: Container

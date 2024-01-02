@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simpleconfig
+data:
+  hello: "ndione"
+  beta: "hrkrk"

@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rolebinding-call-api
+subjects:
+  - kind: ServiceAccount
+    name: api-call
+    namespace: t23
+roleRef:
+  kind: ClusterRole
+  name: read-api
+  apiGroup: rbac.authorization.k8s.io

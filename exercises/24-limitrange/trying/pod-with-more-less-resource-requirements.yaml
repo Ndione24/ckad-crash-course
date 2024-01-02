@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod-less-more-cpu-resource-requirements
+  name: pod-less-more-cpu-resource-requirements
+spec:
+  containers:
+  - image: bmuschko/nodejs-hello-world:1.0.0
+    name: pod-less-more-cpu-resource-requirements
+    resources:
+      limits:
+        cpu: "40m"
+      requests:
+        cpu: "35m"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
